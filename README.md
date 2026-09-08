@@ -40,3 +40,14 @@ This project helps me learn how to:
 
 JavaScript files can be executed directly from the terminal.
 
+# AI Pair Programming
+
+## Overview
+
+This project demonstrates using AI as a pair programmer for implementation, documentation, and testing.
+
+The task has three main parts:
+
+1. Implement `logWithTimestamp`
+2. Generate JSDoc for `deepMerge`
+3. Generate unit tests for `deepMerge`

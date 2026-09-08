@@ -51,3 +51,62 @@ The task has three main parts:
 1. Implement `logWithTimestamp`
 2. Generate JSDoc for `deepMerge`
 3. Generate unit tests for `deepMerge`
+
+---
+
+## 1. Implement `logWithTimestamp`
+
+### Objective
+
+Create a logging function using an AI pair programmer.
+
+The function must:
+
+- Accept `message` and `level`
+- Format the current date and time as `YYYY-MM-DD HH:mm:ss`
+- Convert the log level to uppercase
+- Print the message in this format:
+
+### Function Contract
+
+The comment and function signature were written before asking AI to generate the implementation.
+
+```javascript
+// Format the current date and time and log the message to the console
+// prefixed with the timestamp and the uppercase log level.
+// The timestamp must use the format YYYY-MM-DD HH:mm:ss.
+function logWithTimestamp(message, level) {
+
+}
+
+## 2. Generate JSDoc for `deepMerge`
+
+### Objective
+
+Use AI to generate complete JSDoc documentation for the supplied `deepMerge` function.
+
+```javascript
+function deepMerge(target, source) {
+  for (const key in source) {
+    if (source[key] instanceof Object && !Array.isArray(source[key])) {
+      if (!target[key]) target[key] = {};
+      deepMerge(target[key], source[key]);
+    } else {
+      target[key] = source[key];
+    }
+  }
+  return target;
+}
+
+The JSDoc must include:
+
+- `@param`
+- `@returns`
+- An explanation of the recursive/deep merge behavior
+
+## 4. Active Learning Reflection
+
+The principle "You Do the Thinking, AI Does the Typing" was demonstrated by defining the function contract before using AI. I focused on what the function needed to do, such as the timestamp format and uppercase log level, while AI helped generate the implementation. I then reviewed the generated code to make sure it matched the requirements.
+
+
+
